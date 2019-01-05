@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="grupa MEWAY" />
+  <!-- FONT -->
+  <link
+   href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;subset=latin-ext"
+   rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>User page</title>
+ </head>
+ <body>
+  <nav class="nav nav--dark">
+   <div class="container nav__container">
+    <a href="" class="nav__logo">
+     <img src="./img/MEWAY logo.png" alt="logo MEWAY" class="nav__logo" />
+    </a>
+    <div class="nav__container-inner">
+     <button class="nav__link nav__link--flex nav__search-btn">
+      szukaj
+      <img class="nav__search-icon" src="./img/search.svg" alt="search icon" />
+     </button>
+     <ul class="nav__menu nav__menu-user">
+      <li><a href="#" class="nav__link">odkryj</a></li>
+      <li><a href="#" class="nav__link">moje projekty</a></li>
+      <li>
+       <a href="#" class="nav__link nav__link--is-btn">UTWÓRZ PROJEKT</a>
+      </li>
+      <li>
+       <div class="user-info">
+        <img src="" alt="" class="user-info__img" />
+        <div class="nav__link user-info__email">
+         johndoe@gmail.com
+
+         <img src="./img/down-arrow.svg" alt="" class="user-info__arrow" />
+         <div class="user-info__settings">
+          <button class="user-info__btn">MÓJ PROFIL</button>
+          <button class="user-info__btn">ZMIEŃ HASŁO</button>
+          <button class="user-info__btn">WYLOGUJ SIĘ</button>
+         </div>
+        </div>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <button class="hamburger hamburger-user">
+     <span class="hamburger__line"></span>
+     <span class="hamburger__line"></span> <span class="hamburger__line"></span>
+    </button>
+   </div>
+  </nav>
+  <div class="nav__search-container">
+   <!-- <input class="nav__search-input" type="search" /> -->
+   <form class="container" method="POST" action="">
+    Słowo kluczowe: <input type="text" placeholder="np. strona www" />
+    <div>
+     Twoje umiejętności:
+     <select>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JS</option>
+      <option value="REACT">REACT</option>
+     </select>
+     Poziom:
+     <select>
+      <option value="Poczatkujacy">Poczatkujący</option>
+      <option value="Sredniozaawansowany">Średniozaawansowany</option>
+      <option value="Zaawansowany">Zaawansowany</option>
+     </select>
+     Rodzaj:
+     <select>
+      <option value="Strona">Strona</option>
+      <option value="Aplikacja">Aplikacja</option>
+      <option value="Gra">Gra</option>
+					</select>
+					Zespół od: <input type="number" min="1" max="100">
+					do:<input type="number" min="1" max="100">
+    </div>
+   </form>
+  </div>
+  <footer class="footer footer--dark">© 2018 made by MEWAY</footer>
+  <script src="js/main.js"></script>
+ </body>
+</html>
