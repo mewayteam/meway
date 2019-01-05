@@ -1,0 +1,31 @@
+.section {
+ padding: 120px 10px;
+ &--center {
+  @include flex(center, center, column);
+ }
+ &__title {
+  color: $light-blue;
+  font-weight: 700;
+  // FIXME: margin bottom!!!
+  // margin-bottom: 1rem;
+  // FIXME: replace with variable
+  font-size: 2rem;
+  &--center {
+   @extend %textCenter;
+  }
+  &--white{
+   color: $white;
+  }
+ }
+ &__text {
+  color: $dark-grey;
+ }
+ &__img {
+  width: 100%;
+  margin: 0 auto;
+ }
+}
+
+#join-us {
+ @include bg-image('../img/join-us.jpg', cover, no-repeat, center, unset);
+}

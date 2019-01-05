@@ -1,0 +1,61 @@
+.hamburger {
+ padding: 10px;
+ width: 50px;
+ height: 40px;
+ position: relative;
+ cursor: pointer;
+ z-index: 1005;
+
+ &__line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: $yellow;
+  position: absolute;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+ }
+
+ @media screen and (min-width: 768px) {
+  display: none;
+ }
+ &-user {
+  @media screen and (max-width: 1280px) {
+   display: block;
+  }
+ }
+
+ & :nth-child(1) {
+  top: 10px;
+ }
+
+ & :nth-child(2) {
+  top: 20px;
+ }
+
+ & :nth-child(3) {
+  top: 30px;
+ }
+}
+
+.hamburger--open {
+ .hamburger {
+  & :nth-child(1) {
+   left: 10px;
+   top: 50%;
+   -webkit-transform: translateY(-50%) rotate(45deg);
+   transform: translateY(-50%) rotate(45deg);
+  }
+
+  & :nth-child(2) {
+   opacity: 0;
+  }
+
+  & :nth-child(3) {
+   left: 10px;
+   top: 50%;
+   -webkit-transform: translateY(-50%) rotate(-45deg);
+   transform: translateY(-50%) rotate(-45deg);
+  }
+ }
+}

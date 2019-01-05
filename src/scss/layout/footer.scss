@@ -1,0 +1,12 @@
+.footer {
+ @include flex(center, center, column);
+ padding: 10px;
+ background-color: $blue;
+ color: $white;
+ &--dark {
+  background-color: $dark-grey;
+ }
+ & a {
+  color: $white;
+ }
+}

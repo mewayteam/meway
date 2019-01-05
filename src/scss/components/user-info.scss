@@ -1,0 +1,41 @@
+.user-info {
+ @include flex(center, center, row);
+ position: relative;
+ &__img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 1px solid $blue;
+ }
+ &__email {
+  @include flex(center, center, row);
+  margin-left: 6px;
+  &:hover .user-info__settings {
+   display: flex;
+  }
+ }
+ &__arrow {
+  height: 18px;
+  margin-left: 6px;
+ }
+ &__settings {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  background: $blue;
+  color: $white;
+  transition: all 0.4s ease;
+  @include flex(center, center, column);
+  width: 100%;
+  display: none;
+ }
+ &__btn {
+  color: $white;
+  cursor: pointer;
+  margin: 5px 0;
+  border-bottom: 3px solid transparent;
+  &:hover {
+   border-bottom: 3px solid $yellow;
+  }
+ }
+}

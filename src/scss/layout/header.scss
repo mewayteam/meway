@@ -1,0 +1,35 @@
+.header {
+ min-height: calc(100vh - 56px);
+ margin-top: 56px;
+ @include bg-image('../img/hero-image.jpg', cover, no-repeat, center, fixed);
+ @include flex(unset, center, row);
+ padding: 0 10px;
+ &__heading {
+  color: $white;
+  margin: 0;
+  // FIXME: replace with variable
+  font-size: 5rem;
+  transition: all 0.3s ease;
+  @media screen and (max-width: 1024px) {
+   // FIXME: replace with variable
+   font-size: 3.65rem;
+   text-align: center;
+  }
+  @media screen and (max-width: 340px) {
+   // FIXME: replace with variable
+   font-size: 2.8rem;
+  }
+  &--separator {
+   display: block;
+  }
+ }
+ &__img {
+  max-height: 360px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  @media screen and (max-width: 1088px) {
+   display: none;
+  }
+ }
+}

@@ -1,0 +1,67 @@
+/*
+ Colors
+*/
+
+$white: #ffffff;
+$albaster: #e9f1df;
+$blue: #36b1bf;
+$light-blue: #4ad9d9;
+$yellow: #ffcb05;
+$dark-grey: #2d2d2d;
+
+/*
+ Font-weights
+*/
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+/*
+ Sizes
+*/
+
+/*
+ Helpers
+*/
+
+@mixin flex($justify-content, $align-items, $direction) {
+ display: flex;
+ justify-content: $justify-content;
+ align-items: $align-items;
+ flex-direction: $direction;
+}
+
+@mixin bg-image($src, $size, $repeat, $position, $attachment) {
+ background: {
+  image: url($src);
+  size: $size;
+  repeat: $repeat;
+  position: $position;
+  attachment: $attachment;
+ }
+}
+
+%textCapitalize {
+ text-transform: capitalize;
+}
+
+%textUppercase {
+ text-transform: uppercase;
+}
+
+%textCenter {
+ text-align: center;
+}
+
+%centerFlex {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+%resetList {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
