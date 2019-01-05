@@ -134,6 +134,8 @@
    font-weight: $font-weight-bold;
    & input {
     border-bottom: 2px solid $dark-grey;
+    // FIXME: delte down 
+    background: transparent;
    }
   }
   &-icon {
