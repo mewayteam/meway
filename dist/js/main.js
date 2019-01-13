@@ -16,6 +16,7 @@
 
     if (target.classList.value === 'nav__link nav__link--flex nav__search-btn') {
       body.classList.toggle('nav__search-btn--open');
+      document.querySelector('.main-content').classList.toggle('main-content--is-pushed-down');
     }
   });
 })();
