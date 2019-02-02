@@ -1,334 +1,297 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
+ <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="" type="image/x-icon" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="author" content="grupa MEWAY" />
   <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;subset=latin-ext" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <link
+   href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;subset=latin-ext"
+   rel="stylesheet"
+  />
+  <link
+   rel="stylesheet"
+   href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+   integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+   crossorigin="anonymous"
+  />
   <link rel="stylesheet" href="./css/main.css" />
-  <title>User page</title>
-</head>
+  <title>Meway</title>
+ </head>
 
-<body>
+ <body>
   <nav class="nav nav--dark">
-    <div class="container nav__container">
-      <a href="" class="nav__logo">
+   <div class="container nav__container">
+    <a href="./user.html" class="nav__logo">
      <img src="./img/MEWAY logo.png" alt="logo MEWAY" class="nav__logo" />
     </a>
-      <div class="nav__container-inner">
-        <button class="nav__link nav__link--flex nav__search-btn">
-          szukaj
-          <img class="nav__search-icon" src="./img/search.svg" alt="search icon" />
-        </button>
-        <ul class="nav__menu nav__menu-user">
-          <li><a href="#" class="nav__link">odkryj</a></li>
-          <li><a href="#" class="nav__link">moje projekty</a></li>
-          <li>
-            <a href="#" class="nav__link nav__link--is-btn">UTWÓRZ PROJEKT</a>
-          </li>
-          <li>
-            <div class="user-info">
-              <img src="" alt="" class="user-info__img" />
-              <div class="nav__link user-info__email">
-                johndoe@gmail.com
-
-                <img src="./img/down-arrow.svg" alt="" class="user-info__arrow" />
-                <div class="user-info__settings">
-                  <button class="user-info__btn">MÓJ PROFIL</button>
-                  <button class="user-info__btn">ZMIEŃ HASŁO</button>
-                  <button class="user-info__btn">WYLOGUJ SIĘ</button>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <button class="hamburger hamburger-user">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span> <span class="hamburger__line"></span>
-      </button>
+    <div class="nav__container-inner">
+     <button class="nav__link nav__link--flex nav__search-btn">
+      szukaj
+      <img class="nav__search-icon" src="./img/search.svg" alt="search icon" />
+     </button>
+     <ul class="nav__menu nav__menu-user">
+      <li><a href="#" class="nav__link">odkryj</a></li>
+      <li><a href="#" class="nav__link">moje projekty</a></li>
+      <li>
+       <a href="#" class="nav__link nav__link--is-btn">UTWÓRZ PROJEKT</a>
+      </li>
+      <li>
+       <div class="user-info">
+        <img src="" alt="" class="user-info__img" />
+        <div class="nav__link user-info__email">
+         johndoe@gmail.com
+         <img src="./img/down-arrow.svg" alt="" class="user-info__arrow" />
+         <div class="user-info__settings">
+          <button class="user-info__btn">ZMIEŃ HASŁO</button>
+          <button class="user-info__btn">WYLOGUJ SIĘ</button>
+         </div>
+        </div>
+       </div>
+      </li>
+     </ul>
     </div>
+    <button class="hamburger hamburger-user">
+     <span class="hamburger__line"></span>
+     <span class="hamburger__line"></span> <span class="hamburger__line"></span>
+    </button>
+   </div>
   </nav>
   <div class="nav__search-container">
-    <!-- <input class="nav__search-input" type="search" /> -->
-    <form class="container" method="POST" action="">
-      Słowo kluczowe: <input type="text" placeholder="np. strona www" />
-      <div>
-        Twoje umiejętności:
-        <select>
-          <option value="HTML">HTML</option>
-          <option value="CSS">CSS</option>
-          <option value="JS">JS</option>
-          <option value="REACT">REACT</option>
-        </select>
-        Poziom:
-        <select>
-          <option value="Poczatkujacy">Poczatkujący</option>
-          <option value="Sredniozaawansowany">Średniozaawansowany</option>
-          <option value="Zaawansowany">Zaawansowany</option>
-        </select>
-        Rodzaj:
-        <select>
-          <option value="Strona">Strona</option>
-          <option value="Aplikacja">Aplikacja</option>
-          <option value="Gra">Gra</option>
-        </select>
-        Zespół od: <input type="number" min="1" max="100">
-        do:<input type="number" min="1" max="100">
-      </div>
-    </form>
+   <!-- <input class="nav__search-input" type="search" /> -->
+   <form class="container" method="POST" action="">
+    <input
+     type="search"
+     name="search-key"
+     id="search-key"
+     class="search__input"
+     placeholder="szukaj"
+    />
+    <label class="search__label" for=""
+     >Twoje umiejętności:
+     <select>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JS</option>
+      <option value="REACT">REACT</option>
+     </select>
+    </label>
+    <label class="search__label" for=""
+     >Poziom:
+     <select>
+      <option value="Poczatkujacy">Poczatkujący</option>
+      <option value="Sredniozaawansowany">Średniozaawansowany</option>
+      <option value="Zaawansowany">Zaawansowany</option>
+     </select>
+    </label>
+    <label class="search__label" for=""
+     >Rodzaj:
+     <select>
+      <option value="Strona">Strona</option>
+      <option value="Aplikacja">Aplikacja</option>
+      <option value="Gra">Gra</option>
+     </select>
+    </label>
+   </form>
   </div>
-
   <!-- SEKCJA PROJEKTY MARGIN-TOP:56PX -->
-
-  <main class="main-content">
-
+  <div class="container">
+   <main class="main-content">
     <div class="tags">
-      <span class="tags__item">front-end</span>
-      <span class="tags__item">projektowanie graficzne</span>
-      <span class="tags__item">Kraków</span>
-      <span class="tags__item">Polska</span>
-      <span class="tags__item">4-7 osób</span>
-      <span class="tags__item">początkujący</span>
+     <span class="tags__item">front-end</span>
+     <span class="tags__item">projektowanie graficzne</span>
+     <span class="tags__item">Kraków</span>
+     <span class="tags__item">Polska</span>
+     <span class="tags__item">4-7 osób</span>
+     <span class="tags__item">początkujący</span>
     </div>
-
-    <div class="projects">
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
+    <div class="cards">
+     <div class="card">
+      <img
+       class="card__img"
+       src="img/programming-code.jpg"
+       alt="Sample of programming code"
+      />
+      <div class="card__container">
+       <h2 class="card__title">Tytuł</h2>
+       <p class="card__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in
+        voluptatum optio accusantium reprehenderit pariatur voluptas fugiat
+        ullam quis sapiente hic ab, eveniet autem, sit nesciunt saepe sint
+        voluptates consequatur.
+       </p>
+       <div class="card__footer">
+        <span class="item">
+         <i class="fas fa-users"></i>
+         4/10
+        </span>
+        <span class="item">
+         <i class="fas fa-signal"></i>
+         początkujący
+        </span>
+       </div>
       </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            10/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
+     </div>
+     <!-- CARD -->
+     <div class="card">
+      <img
+       class="card__img"
+       src="img/programming-code.jpg"
+       alt="Sample of programming code"
+      />
+      <div class="card__container">
+       <h2 class="card__title">Tytuł</h2>
+       <p class="card__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in
+        voluptatum optio accusantium reprehenderit pariatur voluptas fugiat
+        ullam quis sapiente hic ab, eveniet autem, sit nesciunt saepe sint
+        voluptates consequatur.
+       </p>
+       <div class="card__footer">
+        <span class="item">
+         <i class="fas fa-users"></i>
+         4/10
+        </span>
+        <span class="item">
+         <i class="fas fa-signal"></i>
+         początkujący
+        </span>
+       </div>
       </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-            </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
+     </div>
+     <!-- CARD -->
+     <div class="card">
+      <img
+       class="card__img"
+       src="img/programming-code.jpg"
+       alt="Sample of programming code"
+      />
+      <div class="card__container">
+       <h2 class="card__title">Tytuł</h2>
+       <p class="card__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in
+        voluptatum optio accusantium reprehenderit pariatur voluptas fugiat
+        ullam quis sapiente hic ab, eveniet autem, sit nesciunt saepe sint
+        voluptates consequatur.
+       </p>
+       <div class="card__footer">
+        <span class="item">
+         <i class="fas fa-users"></i>
+         4/10
+        </span>
+        <span class="item">
+         <i class="fas fa-signal"></i>
+         początkujący
+        </span>
+       </div>
       </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-            </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-            </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-            </span>
-          </div>
-        </div>
+     </div>
+     <!-- CARD -->
+     <div class="card">
+      <img
+       class="card__img"
+       src="img/programming-code.jpg"
+       alt="Sample of programming code"
+      />
+      <div class="card__container">
+       <h2 class="card__title">Tytuł</h2>
+       <p class="card__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in
+        voluptatum optio accusantium reprehenderit pariatur voluptas fugiat
+        ullam quis sapiente hic ab, eveniet autem, sit nesciunt saepe sint
+        voluptates consequatur.
+       </p>
+       <div class="card__footer">
+        <span class="item">
+         <i class="fas fa-users"></i>
+         4/10
+        </span>
+        <span class="item">
+         <i class="fas fa-signal"></i>
+         początkujący
+        </span>
+       </div>
       </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
+     </div>
+     <!-- CARD -->
+     <div class="card">
+      <img
+       class="card__img"
+       src="img/programming-code.jpg"
+       alt="Sample of programming code"
+      />
+      <div class="card__container">
+       <h2 class="card__title">Tytuł</h2>
+       <p class="card__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in
+        voluptatum optio accusantium reprehenderit pariatur voluptas fugiat
+        ullam quis sapiente hic ab, eveniet autem, sit nesciunt saepe sint
+        voluptates consequatur.
+       </p>
+       <div class="card__footer">
+        <span class="item">
+         <i class="fas fa-users"></i>
+         4/10
+        </span>
+        <span class="item">
+         <i class="fas fa-signal"></i>
+         początkujący
+        </span>
+       </div>
       </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            10/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-            </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/programming-code.jpg" alt="Sample of programming code">
-        <div class="card__content">
-          <h2 class="card__title">Tytuł</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatum optio
-            accusantium reprehenderit pariatur voluptas fugiat ullam quis sapiente hic ab, eveniet autem, sit nesciunt
-            saepe sint voluptates consequatur.</p>
-          <div class="card__footer">
-            <span class="item">
-            <i class="item__icon fas fa-users"></i>
-            4/10
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-map-marker-alt"></i>
-            Kraków
-          </span>
-            <span class="item">
-            <i class="item__icon fas fa-signal"></i>
-            początkujący
-          </span>
-            <span class="item">
-            <i class="item__icon far fa-clock"></i>
-            maj 2018
-          </span>
-          </div>
-        </div>
-      </div>
-
+     </div>
     </div>
-  </main>
-
-  <footer class="footer footer--dark">© 2018 made by MEWAY</footer>
+    <!-- CARD END -->
+   </main>
+  </div>
+  <!-- KRATOR PROJEKTU -->
+  <div class="project-creator">
+   <div>
+    <button class="project-creator__close">
+     <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    <h2 class="project-creator__title">Kreator projektu</h2>
+    <div class="project-creator__container">
+     <label for="project-name" class="project-creator__label"> Nazwa:</label>
+     <input
+      type="text"
+      name="project-name"
+      id="project-name"
+      class="project-creator__input"
+     />
+    </div>
+    <div class="project-creator__container">
+     <label for="" class="project-creator__label">Publikacja/Typ:</label>
+     <select class="project-creator__select">
+      <option value="publiczny">Publiczny</option>
+      <option value="prywatny">prywatny</option>
+     </select>
+    </div>
+    <div class="project-creator__container">
+     <label for="" class="project-creator__label">Rodzaj:</label>
+     <select class="project-creator__select">
+      <option value="Strona">Strona</option>
+      <option value="Aplikacja">Aplikacja</option>
+      <option value="Gra">Gra</option>
+     </select>
+    </div>
+    <div class="project-creator__container">
+     <label for="" class="project-creator__label">Opis:</label>
+     <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      class="project-creator__textarea"
+     ></textarea>
+    </div>
+    <div class="project-creator__container">
+     <a href="#" class="btn project-creator__submit">Utwórz</a>
+    </div>
+   </div>
+  </div>
   <script src="js/main.js"></script>
-</body>
-
+ </body>
 </html>

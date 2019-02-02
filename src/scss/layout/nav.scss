@@ -1,190 +1,186 @@
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $blue;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  z-index: 1000;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: $blue;
+ -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+ z-index: 1000;
 
-  &__container {
-    @include flex(space-between, center, row);
-    height: 56px;
-    padding: 0 10px;
+ &__container {
+  @include flex(space-between, center, row);
+  height: 56px;
+  padding: 0 10px;
 
-    &-inner {
-      @include flex(center, center, row);
-    }
+  &-inner {
+   @include flex(center, center, row);
+  }
+ }
+
+ &__menu {
+  @extend %resetList;
+  @include flex(unset, center, row);
+
+  @media screen and (max-width: 768px) {
+   @include flex(center, center, column);
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   left: -100%;
+   opacity: 0;
+   top: 0;
+   -webkit-transition: 0.3s all ease-in;
+   transition: 0.3s all ease-in;
+   z-index: 1000;
+   background-color: $blue;
   }
 
-  &__menu {
-    @extend %resetList;
-    @include flex(unset, center, row);
+  &-user {
+   @media screen and (max-width: 1280px) {
+    background: $dark-grey;
+    @include flex(center, center, column);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    opacity: 0;
+    top: 0;
+    -webkit-transition: 0.3s all ease-in;
+    transition: 0.3s all ease-in;
+    z-index: 1000;
 
-    @media screen and (max-width: 768px) {
-      @include flex(center, center, column);
-      height: 100vh;
-      width: 100%;
-      position: fixed;
-      left: -100%;
-      opacity: 0;
-      top: 0;
-      -webkit-transition: 0.3s all ease-in;
-      transition: 0.3s all ease-in;
-      z-index: 1000;
-      background-color: $blue;
+    & .nav__link {
+     margin: 12px 0;
     }
+   }
+  }
+ }
 
-    &-user {
-      @media screen and (max-width: 1280px) {
-        background: $dark-grey;
-        @include flex(center, center, column);
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        left: -100%;
-        opacity: 0;
-        top: 0;
-        -webkit-transition: 0.3s all ease-in;
-        transition: 0.3s all ease-in;
-        z-index: 1000;
+ &__logo {
+  height: 52px;
+  display: block;
+ }
 
-        & .nav__link {
-          margin: 12px 0;
-        }
-      }
-    }
+ &__link {
+  display: block;
+  @extend %textUppercase;
+  position: relative;
+  margin-right: 20px;
+  // FIXME: replace with variable
+  font-size: 1.2rem;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+   margin: 12px 0;
+   font-size: 1rem;
   }
 
-  &__logo {
-    height: 52px;
-    display: block;
+  &--flex {
+   @include flex(center, center, row);
   }
 
-  &__link {
-    display: block;
-    @extend %textUppercase;
-    position: relative;
-    margin-right: 20px;
-    // FIXME: replace with variable
-    font-size: 1.2rem;
-    color: #fff;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    font-weight: 700;
-    cursor: pointer;
-
-    @media screen and (max-width: 768px) {
-      margin: 12px 0;
-      font-size: 1rem;
-    }
-
-    &--flex {
-      @include flex(center, center, row);
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 4px;
-      background-color: $yellow;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-    }
-
-    &:hover {
-      color: $white;
-    }
-
-    &:hover.nav__link::after {
-      width: 100%;
-      text-decoration: none;
-    }
-
-    &--is-btn {
-      padding: 5px 18px;
-      background-color: $yellow;
-      border-radius: 30px;
-      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-      &:hover {
-        background-color: #4ad9d9;
-        -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-          0 10px 10px rgba(0, 0, 0, 0.22);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        color: $white;
-      }
-
-      &::after {
-        display: none;
-        margin-right: 0;
-      }
-    }
+  &::after {
+   content: '';
+   display: block;
+   width: 0;
+   height: 4px;
+   background-color: $yellow;
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
   }
 
-  &__search {
-    &-btn {
-      &--open {
-        .nav__search-container {
-          transform: translateY(56px);
-        }
-      }
-    }
-
-    &-container {
-      width: 100%;
-      padding: 10px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: $dark-grey;
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease;
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-      font-weight: $font-weight-bold;
-
-      & input {
-        border-bottom: 2px solid $dark-grey;
-      }
-    }
-
-    &-icon {
-      height: 18px;
-      margin-left: 6px;
-    }
-
-    &-input {
-      display: block;
-      color: $white;
-      border-bottom: 2px solid $white;
-      width: 75%;
-      margin: 0 auto;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-
-      &:focus {
-        border-bottom-color: $blue;
-      }
-    }
+  &:hover {
+   color: $white;
   }
 
-  &--dark {
-    background-color: $dark-grey;
+  &:hover.nav__link::after {
+   width: 100%;
+   text-decoration: none;
   }
+
+  &--is-btn {
+   padding: 5px 18px;
+   background-color: $yellow;
+   border-radius: 30px;
+   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+   &:hover {
+    background-color: #4ad9d9;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+     0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    color: $white;
+   }
+
+   &::after {
+    display: none;
+    margin-right: 0;
+   }
+  }
+ }
+
+ &__search {
+  &-btn {
+   &--open {
+    .nav__search-container {
+     transform: translateY(56px);
+    }
+   }
+  }
+
+  &-container {
+   width: 100%;
+   padding: 10px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-color: $dark-grey;
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+   -webkit-transform: translateY(-100%);
+   transform: translateY(-100%);
+   font-weight: $font-weight-bold;
+  }
+
+  &-icon {
+   height: 18px;
+   margin-left: 6px;
+  }
+
+  &-input {
+   display: block;
+   color: $white;
+   border-bottom: 2px solid $white;
+   width: 75%;
+   margin: 0 auto;
+   -webkit-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+
+   &:focus {
+    border-bottom-color: $blue;
+   }
+  }
+ }
+
+ &--dark {
+  background-color: $dark-grey;
+ }
 }
 
 .nav__menu--open {
-  .nav__menu {
-    left: 0;
-    opacity: 1;
-  }
+ .nav__menu {
+  left: 0;
+  opacity: 1;
+ }
 }

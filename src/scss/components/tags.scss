@@ -1,0 +1,11 @@
+.tags {
+ @include flex(flex-start, center, row);
+ flex-wrap: wrap;
+ .tags__item {
+  background-color: #dae2d0;
+  color: $dark-grey;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 32px;
+ }
+}

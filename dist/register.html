@@ -15,44 +15,43 @@
   <!-- STYLE -->
   <link rel="stylesheet" href="./css/main.css" />
  </head>
-
  <body>
   <form action="" class="form--full-scope form--darked" method="POST">
    <h1 class="form__header">Rejestracja</h1>
    <div class="form__body">
-    <label for="login-email" class="form__label">
+    <label for="register-email" class="form__label">
      <h3 class="form__subtitle">email</h3>
      <input
       type="email"
-      name="login-email"
-      id="login-email"
+      name="register-email"
+      id="register-email"
       class="form__input"
       placeholder="email"
      />
     </label>
-    <label for="login-password" class="form__label">
+    <label for="register-password" class="form__label">
      <h3 class="form__subtitle">hasło</h3>
      <input
       type="password"
-      name="login-email"
-      id="login-email"
-      class="form__input form__input-valid"
+      name="register-password"
+      id="register-password"
+      class="form__input"
       placeholder="hasło"
      />
-     <span class="form__input-valid-text"
+     <span class="form__span-error"
       >hasło powinno zawierać minimum 6 znaków</span
      >
     </label>
-    <label for="login-repeat-password" class="form__label">
+    <label for="register-repeat-password" class="form__label">
      <h3 class="form__subtitle">powtórz hasło</h3>
      <input
       type="password"
-      name="login-repeat-password"
-      id="login-repeat-password"
-      class="form__input form__input-valid"
+      name="register-repeat-password"
+      id="register-repeat-password"
+      class="form__input"
       placeholder="hasło"
      />
-     <span class="form__input-valid-text">za krótkie hasło</span>
+     <span class="form__span-error">za krótkie hasło</span>
     </label>
     <label for="terms" class="form__label">
      <input type="checkbox" name="terms" id="terms" />

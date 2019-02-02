@@ -19,7 +19,11 @@
  @media screen and (min-width: 768px) {
   display: none;
  }
+
  &-user {
+  @media screen and (min-width: 1280px) {
+   display: none;
+  }
   @media screen and (max-width: 1280px) {
    display: block;
   }
